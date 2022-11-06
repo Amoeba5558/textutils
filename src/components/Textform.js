@@ -71,17 +71,16 @@ export default function Textform(props) {
         <br />
         <h2>{props.heading}</h2>
             <div className="mb-3">
-                <label htmlFor="myBox" className="form-label">This is the textarea. Use buttons given below to perform various operations</label><br />
                 {/* a function needs to be written for the onChange */}
                 <textarea className="form-control" id="myBox" value = {text} onChange = {handleOnChange} style = {{backgroundColor: props.mode === 'dark'?'black':'white',color: props.mode === 'dark'?'white':'black'}} rows="8"></textarea>
                 {/* the two curly brackets are used for changing the style. One set is for using javascript in jsx and the other one is for the object which is used to change the html properties using javascript */}
             </div>
-            <button className="btn btn-primary mx-1 my-1 btn-sm" onClick={toUppercase}>To Uppercase</button>
-            <button className="btn btn-primary mx-1 my-1 btn-sm" onClick={toLowercase}>To Lowercase</button>
-            <button className="btn btn-primary mx-1 my-1 btn-sm" onClick={handleSentenceCase}>Lower to Sentence case</button>
-            <button className="btn btn-primary mx-1 my-1 btn-sm" onClick={handleClear}>Clear textarea</button>
-            <button className="btn btn-primary mx-1 my-1 btn-sm" onClick={handleCopy}>Copy text</button>
-            <button className="btn btn-primary mx-1 my-1 btn-sm" onClick={handleExtraSpaces}>Remove Extra spaces</button>
+            <button disabled = {text.length ===0} className="btn btn-primary mx-1 my-1 btn-sm" onClick={toUppercase}>To Uppercase</button>
+            <button disabled = {text.length ===0} className="btn btn-primary mx-1 my-1 btn-sm" onClick={toLowercase}>To Lowercase</button>
+            <button disabled = {text.length ===0} className="btn btn-primary mx-1 my-1 btn-sm" onClick={handleSentenceCase}>Lower to Sentence case</button>
+            <button disabled = {text.length ===0} className="btn btn-primary mx-1 my-1 btn-sm" onClick={handleClear}>Clear textarea</button>
+            <button disabled = {text.length ===0} className="btn btn-primary mx-1 my-1 btn-sm" onClick={handleCopy}>Copy text</button>
+            <button disabled = {text.length ===0} className="btn btn-primary mx-1 my-1 btn-sm" onClick={handleExtraSpaces}>Remove Extra spaces</button>
             
     </div>
     <div className="container my-4" style = {{color: props.mode === 'dark'?'white':'black'}}>
