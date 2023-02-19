@@ -1,7 +1,7 @@
 {
   "name": "textutils",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -15,7 +15,11 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy":"npm run build",
+<<<<<<< HEAD
     "deploy":"gh-pages -d build",
+=======
+    "deploy": "gh-pages -d build",
+>>>>>>> 9cd3af1b740b4de853a15e8d70657460a9e85d39
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
